@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.header`
   height: 5rem;
   width: 100%;
-  border-bottom: 1px solid ${props => props.theme.colors.outline};
+  background: ${props => props.theme.colors.background};
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 
   a {
     text-decoration: none;
@@ -16,8 +17,8 @@ export const Container = styled.header`
     width: 100%;
     max-width: 64rem;
     height: 100%;
-    margin: 0 auto;
     padding: 0 1.5rem;
+    margin: 0 auto;
 
     // As cores da logo tem que ser estáticas?
     strong {

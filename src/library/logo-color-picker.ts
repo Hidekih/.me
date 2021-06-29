@@ -20,18 +20,20 @@ type LogoColors = {
   sass: {
     [key: string]: string;
   };
+  nodejs: {
+    [key: string]: string;
+  };
 }
 
 const LogoColorPicker = {} as LogoColors;
 
 Object.assign(LogoColorPicker, { ...LogoColorPicker, github: { primary: '#333'}});
 Object.assign(LogoColorPicker, { ...LogoColorPicker, reactjs: { primary: '#61DBFB' }});
-
 Object.assign(LogoColorPicker, { ...LogoColorPicker, javascript: { primary: '#f7df1e' }});
 Object.assign(LogoColorPicker, { ...LogoColorPicker, typescript: { primary: '#3178c6' }});
 Object.assign(LogoColorPicker, { ...LogoColorPicker, html: { primary: '#e34f26' }});
 Object.assign(LogoColorPicker, { ...LogoColorPicker, css: { primary: '#264de4' }});
 Object.assign(LogoColorPicker, { ...LogoColorPicker, sass: { primary: '#cc6699' }});
-// Object.assign(LogoColorPicker, { ...LogoColorPicker, : { primary: '' }});
+Object.assign(LogoColorPicker, { ...LogoColorPicker, nodejs: { primary: '#83CD29', secondary: '#404137' }});
 
 export default LogoColorPicker;

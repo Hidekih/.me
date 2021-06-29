@@ -5,9 +5,10 @@ type ContainerProps = {
   bagdeColor: string;
 }
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.span<ContainerProps>`
   padding: 0.2rem .5rem;
   display: inline-block;
+  /* filter: brightness(0.9); */
 
   color: ${props => props.theme.colors.title};
 
@@ -18,7 +19,7 @@ export const Container = styled.div<ContainerProps>`
   background: ${props => props.bagdeColor};
 
   margin-right: 0.5rem;
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0.5rem;
   line-height: 100%;
   font-size: 0.9rem;
   font-weight: 500;

@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta name="description" content="About me" />
-          <link rel="shortcut icon" href="favicon.png" type="image/png" />
+          <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

@@ -6,3 +6,4 @@ Projeto pessoal para agrupar todos os meus projetos pessoais de maneira mais vis
 
 - NextJs (Framework React)
 - Typescript
+- Styled-components

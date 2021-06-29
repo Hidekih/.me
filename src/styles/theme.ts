@@ -4,7 +4,7 @@ const theme = {
     title: '#F4F4F2',
     text: '#bbbbbe',
     highlight: '#9748A1',
-    outline: '#495464',
+    outline: '#202933',
   }
 }
 

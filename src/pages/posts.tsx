@@ -12,7 +12,7 @@ export default function Posts() {
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
         <br />
-        <h1>Working here...</h1>
+        <h1>Working in progress...</h1>
         <Image src={inProgressImg} alt="In progress" width={900}/>
       </div>
     </>
