@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/Link';
+import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'styled-components';
 import { HiOutlineUserCircle, HiOutlineMail, HiOutlineLocationMarker, HiOutlineTag, HiHeart } from 'react-icons/hi';
