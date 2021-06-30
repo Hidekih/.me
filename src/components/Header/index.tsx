@@ -1,7 +1,7 @@
 import Link from 'next/Link';
 // import { useRouter } from 'next/router';
 
-import { Container, PostsLink } from './styles';
+import { Container } from './styles';
 
 export function Header() {
   // const { asPath } = useRouter();
