@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/Link';
 import Image from 'next/image';
@@ -9,18 +9,18 @@ import { SiInstagram, SiGithub } from 'react-icons/si';
 import { Badge } from '../components/Bagde';
 import clp from '../library/logo-color-picker';
 
-import x from '../assets/gomove-light-mode.png'
+import gomoveImg from '../assets/gomove-dark.jpg';
+import darkLightModeImg from '../assets/dark-light-mode.jpg';
+import formImg from '../assets/form.jpg';
 
 import { Content, Footer, Profile, ProfileData, SkillsList, Links, RepositoriesList, RepositoryCard, RepositoryData } from '../styles/pages/home';
 
 export default function Home() {
   const theme = useTheme();
-  const [ w, setW ] = useState(352);
-  const [ h, setH ] = useState(198);
 
-  useEffect(() => {
-    fetch('')
-  })
+  // useEffect(() => {
+  //   fetch('')
+  // })
 
   return (
     <>
@@ -63,46 +63,80 @@ export default function Home() {
         </Profile>
 
         <RepositoriesList>
-          <h2>Alguns dos meus repositórios no GitHub</h2>
-
+          <h2>Alguns dos meus projetos no GitHub</h2>
 
           <RepositoryCard>
             <div>
-              <Image src={x} width={818} height={460} quality={100}/>
+              <Image src={gomoveImg} objectFit="contain" quality={100}/>
             </div>
             <RepositoryData>
               <h3>GoMove</h3>
               <p>
-                O GoMove é uma aplicação que tem como propósito te auxiliar a ter foco
-                nos momementos que você precisa com a técnica de foco total por 25 minutos
-                e descanso de 5 minutos e propondo exerxcícios para melhorar sua qualidade
-                de vida durante esses 5 minutos.
+                O GoMove é uma aplicação que tem como propósito auxiliar o usuário a ter foco
+                com a técnica de foco total por 25 minutos e descanso de 5 minutos. Durante os 5
+                minutos de descanso é proposto exercícios para melhorar sua qualidadede vida.
               <p>
-                O GoMove ainda conta com um sitema de Learderboard com o seu layout gameficado.</p>
+                O GoMove ainda conta com um sitema de Learderboard e um layout gameficado (Parece um jogo).</p>
               </p>
               <p>
                 O GoMove é um projeto em <strong>NextJS</strong> baseado no move.it,
                 construido durante o NLW4 (Workshop organizado pela Rocketseat). A diferença
-                do GoMove para o projeto original (move.it) é que eu adicionei várias funcionalidades
+                do GoMove para o projeto original (move.it) são as tecnologias que eu adicionei
                 como:
               </p>
               <ul>
-                <li>- Login com Github</li>
-                <li>- Página Learderboard</li>
-                <li>- Persistência dos dados no MongoDB</li>
-                <li>- Serveless function para conectar a aplicação com o banco de dados</li>
-                <li>- Tema dark (com styled-components)</li>
-                <li>- Layout responsivo</li>
+                <li>Login com Github (com Next-auth)</li>
+                <li>Página de Learderboard</li>
+                <li>Persistência dos dados no MongoDB</li>
+                <li>Serveless function para conectar a aplicação com o banco de dados</li>
+                <li>Tema dark (com styled-components)</li>
+                <li>Layout responsivo</li>
               </ul>
 
-              <p>Link para o repositório:
+              <p>Link para o repositório
                 <Link href="https://github.com/Hidekih/gomove">
-                  <a target="_blank" rel="noreferrer">GoMove</a>
+                <a target="_blank" rel="noreferrer"> aqui.</a>
                 </Link>
               </p>
             </RepositoryData>
           </RepositoryCard>
 
+          <RepositoryCard>
+            <div>
+              <Image src={formImg} objectFit="contain" quality={100}/>
+            </div>
+            <RepositoryData>
+              <h3>Formulário em ReactJS com Formik + Yup</h3>
+              <p>
+                Esse pequeno projeto conta com formulário construido com a biblioteca Formik,
+                validação de dados com Yup e verificação de força de senha.
+              </p>
+              <p>
+                Techs: ReactJs, Formik e Yup.
+              </p>
+              <p>Link para o repositório
+                <Link href="https://github.com/Hidekih/reactjs-form">
+                  <a target="_blank" rel="noreferrer"> aqui.</a>
+                </Link>
+              </p>
+            </RepositoryData>
+          </RepositoryCard>
+
+          <RepositoryCard>
+            <div>
+              <Image src={darkLightModeImg} objectFit="contain" quality={100}/>
+            </div>
+            <RepositoryData>
+              <h3>Exemplo simples de site com alternação de temas (dark e light)</h3>
+              <p>Projeto simples fono na alternação de tema (dark e light) usando variáveis CSS.</p>
+              <p>Techs: HTML, CSS e JavaScript</p>
+              <p>Link para o repositório
+                <Link href="https://github.com/Hidekih/dark-mode">
+                <a target="_blank" rel="noreferrer"> aqui.</a>
+                </Link>
+              </p>
+            </RepositoryData>
+          </RepositoryCard>
 
         </RepositoriesList>
 
@@ -110,7 +144,7 @@ export default function Home() {
 
       <Footer>
         <div>
-          <p>Made with <HiHeart color={theme.colors.highlight} size={24}/> by me - 2021</p>
+          <p>Feito com <HiHeart color={theme.colors.highlight} size={24}/> by Alexandre Hideki Siroma</p>
           <Links>
             <Link href="https://www.instagram.com/hideki.siroma/" >
               <a target="_blank" rel="noreferrer"><SiInstagram />Instagram</a>

@@ -14,7 +14,6 @@ function MyApp ({ Component, pageProps }: AppProps) {
       <GlobalStyle />
     </ThemeProvider>
   )
-
 }
 
 export default MyApp;

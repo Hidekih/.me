@@ -61,35 +61,48 @@ export const SkillsList = styled.div`
 `
 
 export const RepositoriesList = styled.div`
-  background: ${props => props.theme.colors.outline};
-  padding: 1.5rem;
   margin-top: 1.5rem ;
-  border-radius: 1rem;
+  display: block;
 
   h2 {
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background: ${props => props.theme.colors.outline};
     text-align: center;
     color: ${props => props.theme.colors.title};
-
-
-
-
-    margin-bottom: 2rem;
   }
 `;
 
 export const RepositoryCard = styled.div`
-  h3 {
-    color: ${props => props.theme.colors.title};
-  }
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: ${props => props.theme.colors.outline};
+  margin-top: 1.5rem;
 
   div:first-child {
-    display: block;
+    display: flex;
     margin: 0 auto;
-    width: max-content;
+    max-width: 100%;
+    height: auto;
 
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
     border-radius: 0.5rem;
-    overflow:hidden;
+    overflow: hidden;
+  }
+`;
+
+export const RepositoryData = styled.div`
+  flex: 1;
+  margin-top: 1.5rem;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    color: ${props => props.theme.colors.title};
   }
 
   p {
@@ -97,14 +110,14 @@ export const RepositoryCard = styled.div`
     text-indent: 1rem;
 
     a {
-      margin-left: 0.5rem;
       text-decoration: none;
       color: ${props => props.theme.colors.highlight};
 
       transition: filter 0.4s;
 
       &:hover {
-        filter: brightness(0.6);
+        filter: brightness(0.8);
+        text-decoration: underline;
       }
     }
   }
@@ -113,19 +126,8 @@ export const RepositoryCard = styled.div`
     margin-top: 0.5rem;
 
     li {
-      margin-left: 1rem;
+      margin-left: 2rem;
     }
-  }
-`;
-
-export const RepositoryData = styled.div`
-  flex: 1;
-  margin-top: 2rem;
-
-
-
-  li {
-    list-style: none;
   }
 `
 
@@ -171,7 +173,8 @@ export const Links = styled.section`
     }
 
     &:hover {
-      filter: brightness(0.6);
+      filter: brightness(0.9);
+      text-decoration: underline;
     }
 
     svg {
