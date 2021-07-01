@@ -13,14 +13,10 @@ import gomoveImg from '../assets/gomove-dark.jpg';
 import darkLightModeImg from '../assets/dark-light-mode.jpg';
 import formImg from '../assets/form.jpg';
 
-import { Content, Footer, Profile, ProfileData, SkillsList, Links, RepositoriesList, RepositoryCard, RepositoryData } from '../styles/pages/home';
+import { Content, Footer, Profile, ProfileData, SkillsList, Links, Title, RepositoriesList, RepositoryCard, RepositoryData } from '../styles/pages/home';
 
 export default function Home() {
   const theme = useTheme();
-
-  // useEffect(() => {
-  //   fetch('')
-  // })
 
   return (
     <>
@@ -31,12 +27,9 @@ export default function Home() {
       <Content>
         <Profile>
           <div>
-            <Image
+            <img
               src="https://avatars.githubusercontent.com/u/59781045?v=4"
               alt="Alexandre Hideki Siroma"
-              width={192}
-              height={192}
-              quality={85}
             />
 
             <ProfileData>
@@ -62,8 +55,8 @@ export default function Home() {
           </SkillsList>
         </Profile>
 
+          <Title>Meus principais projetos no GitHub</Title>
         <RepositoriesList>
-          <h2>Alguns dos meus projetos no GitHub</h2>
 
           <RepositoryCard>
             <div>
@@ -132,14 +125,13 @@ export default function Home() {
               <p>Techs: HTML, CSS e JavaScript</p>
               <p>Link para o repositório
                 <Link href="https://github.com/Hidekih/dark-mode">
-                <a target="_blank" rel="noreferrer"> aqui.</a>
+                  <a target="_blank" rel="noreferrer"> aqui.</a>
                 </Link>
               </p>
             </RepositoryData>
           </RepositoryCard>
 
         </RepositoriesList>
-
       </Content>
 
       <Footer>

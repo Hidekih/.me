@@ -16,16 +16,26 @@ export const Profile = styled.section`
   // Padding Bottom need only 1rem of padding because the badges have 0.5rem of margin bottom
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
+  display: block;
 
   > div:first-child {
     display: flex;
-    
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
 
     img {
-      border-radius: 50%;
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;;
+    }
+  }
+
+  @media (max-width: 768px) {
+    > div:first-child {
+      flex-direction: column;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
 `;
@@ -35,7 +45,7 @@ export const ProfileData = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 1.5rem;
-  
+
   @media (max-width: 768px) {
     margin-left: 0;
     margin-top: 1.5rem;
@@ -73,26 +83,26 @@ export const SkillsList = styled.div`
   }
 `
 
-export const RepositoriesList = styled.div`
-  margin-top: 1.5rem ;
+export const Title = styled.h2`
   display: block;
+  margin-top: 2rem;
+  color: ${props => props.theme.colors.title};
+  text-align: center;
+`;
 
-  h2 {
-    display: flex;
-    justify-content: center;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    background: ${props => props.theme.colors.outline};
-    text-align: center;
-    color: ${props => props.theme.colors.title};
-  }
+export const RepositoriesList = styled.div`
+  margin-top: 2rem ;
+  display: block;
 `;
 
 export const RepositoryCard = styled.div`
   padding: 1.5rem;
   border-radius: 1rem;
   background: ${props => props.theme.colors.outline};
-  margin-top: 1.5rem;
+
+  & + div {
+    margin-top: 1.5rem;
+  }
 
   div:first-child {
     display: flex;
@@ -157,10 +167,6 @@ export const Footer = styled.footer`
     max-width: 64rem;
     margin: 0 auto;
     padding: 1.5rem;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
   }
 
   p {
@@ -170,6 +176,13 @@ export const Footer = styled.footer`
 
     svg {
       margin: 0 0.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    > div {
+      flex-direction: column;
+      align-items: center;
     }
   }
 `
@@ -201,5 +214,18 @@ export const Links = styled.section`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
+
+    a {
+      @media (max-width: 768px) {
+        align-items: flex-start;
+        margin-top: 1rem;
+
+        & + a {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+      }
+    }
   }
 `
