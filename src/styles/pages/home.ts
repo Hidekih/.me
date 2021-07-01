@@ -21,14 +21,14 @@ export const Profile = styled.section`
 
   > div:first-child {
     display: flex;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     img {
       border-radius: 50%;
     }
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
   }
 `;
 
