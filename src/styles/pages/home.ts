@@ -5,6 +5,10 @@ export const Content = styled.main`
   padding: 0 1.5rem;
   width: 100%;
   max-width: 64rem;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const Profile = styled.section`
@@ -12,6 +16,8 @@ export const Profile = styled.section`
   // Padding Bottom need only 1rem of padding because the badges have 0.5rem of margin bottom
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
 
   > div:first-child {
     display: flex;
@@ -20,13 +26,22 @@ export const Profile = styled.section`
       border-radius: 50%;
     }
   }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 export const ProfileData = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
+  
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
 
   p {
     display: flex;
@@ -48,7 +63,7 @@ export const ProfileData = styled.div`
 export const SkillsList = styled.div`
   display: block;
   flex: 1;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 
   h3 {
     letter-spacing: 0.5px;
