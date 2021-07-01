@@ -16,8 +16,6 @@ export const Profile = styled.section`
   // Padding Bottom need only 1rem of padding because the badges have 0.5rem of margin bottom
   padding: 1.5rem 1.5rem 1rem 1.5rem;
   border-radius: 1rem;
-  display: flex;
-  flex-direction: row;
 
   > div:first-child {
     display: flex;
@@ -152,10 +150,6 @@ export const Footer = styled.footer`
   margin-top: auto;
   border-top: 2px solid ${props => props.theme.colors.outline};
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-
   > div {
     display: flex;
     justify-content: space-between;
@@ -163,6 +157,10 @@ export const Footer = styled.footer`
     max-width: 64rem;
     margin: 0 auto;
     padding: 1.5rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   p {
@@ -199,5 +197,9 @@ export const Links = styled.section`
     svg {
       margin-right: 0.5rem;
     }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `
