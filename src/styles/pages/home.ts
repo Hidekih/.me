@@ -27,7 +27,7 @@ export const Profile = styled.section`
     }
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -151,6 +151,10 @@ export const Footer = styled.footer`
   width: 100%;
   margin-top: auto;
   border-top: 2px solid ${props => props.theme.colors.outline};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   > div {
     display: flex;
