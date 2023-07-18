@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ name: 'Hello folks' })
+  console.log(req.query);
+  res.status(200).json({ name: 'Hello folks', params: { req.query } })
 }
